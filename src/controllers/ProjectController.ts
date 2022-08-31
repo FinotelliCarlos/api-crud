@@ -107,7 +107,6 @@ class ProjectController {
 }
 
 function productFile() {
-  //criando arquivo caso não haja na raiz e passando os dados do objeto criando um novo
   fs.writeFile('projects.json', JSON.stringify(projects), error => {
     if (error) {
       console.log(error)
