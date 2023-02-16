@@ -4,13 +4,14 @@
   "main": "server.ts",
   "repository": "https://github.com/FinotelliCarlos/api-crud.git",
   "scripts": {
-    "dev:start": "tsnd --transpile-only --respawn --ignore-watch node_modules sr/server.ts",
+    "dev:start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
     "start": "nodemon dist/server.js",
     "ts": "tsc"
   },
   "author": "FinotelliCarlos <carlos.finotelli@outlook.com>",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "nodemon": "^2.0.19"
   },

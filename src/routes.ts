@@ -6,9 +6,9 @@ const routes = express.Router()
 const projectController = new ProjectController()
 
 routes
-  .get('/projects', projectController.index)
-  .post('/projects/:id', projectController.create)
-  .put('/projects/:id', projectController.change)
-  .delete('/projects/:id', projectController.delete)
+  .get('/projects', projectController.all)
+  .post('/projects/:id', projectController.add)
+  .put('/projects/:id', projectController.update)
+  .delete('/projects/:id', projectController.remove)
 
 export { routes }

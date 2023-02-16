@@ -13,7 +13,7 @@ fs.readFile('projects.json', 'utf-8', (error, data) => {
 })
 
 class ProjectController {
-  async index(req: Request, res: Response): Promise<Response> {
+  async all(req: Request, res: Response): Promise<Response> {
     try {
       return res.status(201).json(projects)
     } catch (err) {
@@ -37,7 +37,7 @@ class ProjectController {
     }
   }
 
-  async create(req: Request, res: Response): Promise<Response> {
+  async add(req: Request, res: Response): Promise<Response> {
     const { title, description, image, link } = await req.body
 
     try {
@@ -61,7 +61,7 @@ class ProjectController {
     }
   }
 
-  async change(req: Request, res: Response): Promise<Response> {
+  async update(req: Request, res: Response): Promise<Response> {
     const { id } = req.params
     const { title, description, image, link } = await req.body
 
@@ -88,7 +88,7 @@ class ProjectController {
     }
   }
 
-  async delete(req: Request, res: Response): Promise<Response> {
+  async remove(req: Request, res: Response): Promise<Response> {
     const { id } = req.params
 
     try {
